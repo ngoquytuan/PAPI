@@ -1,0 +1,5 @@
+Added Component: Designator=J*(JP2)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=COM82 Pin=J*-1
+Added Pin To Net: NetName=COM81 Pin=J*-2
+Added Member To Class: ClassName=PAPI_M2_Control Member=Component J* Jumper

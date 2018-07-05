@@ -1,0 +1,277 @@
+Removed Pin From Net: NetName=+5V Pin=C41-1
+Removed Pin From Net: NetName=GND Pin=C41-2
+Change Component Footprint: Designator=C02 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C04 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C31 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C32 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C33 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C34 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C35 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C36 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C37 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C41 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C42 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C43 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C44 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C45 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C46 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C47 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C48 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C51 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C52 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C53 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C54 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C55 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=C71 Old Footprint=CAPC2012N_F New Footprint=CAP 0805
+Change Component Footprint: Designator=R01 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R31 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R32 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R33 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R41 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R42 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R43 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R44 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R45 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R46 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R47 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R48 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R49 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R51 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R52 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Footprint: Designator=R410 Old Footprint=RESC2012N_F New Footprint=RESC1608N_F
+Change Component Comment : Designator=C71 Old Comment=Cap_10uF_0805 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=RS485_2 Old Comment=COM New Comment=A/B
+Change Component Comment : Designator=R41 Old Comment=Res_1k_0603 New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R42 Old Comment=Res_1k_0603 New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R31 Old Comment=Res_10k_0603 New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R32 Old Comment=Res_10k_0603 New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R33 Old Comment=Res_10k_0603 New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R43 Old Comment=Res_10k_0603 New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R44 Old Comment=Res_10R_0805 New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R45 Old Comment=Res_10R_0805 New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=C31 Old Comment=T? di?n dán 080518p New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C32 Old Comment=T? di?n dán 080518p New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C51 Old Comment=T? di?n dán 0805101 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C52 Old Comment=T? di?n dán 0805101 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C42 Old Comment=T? di?n dán 0805103 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C44 Old Comment=T? di?n dán 0805103 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C45 Old Comment=T? di?n dán 0805103 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C47 Old Comment=T? di?n dán 0805103 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C54 Old Comment=T? di?n dán 0805103 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C55 Old Comment=T? di?n dán 0805103 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C02 Old Comment=T? di?n dán 0805104 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C04 Old Comment=T? di?n dán 0805104 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C33 Old Comment=T? di?n dán 0805104 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C34 Old Comment=T? di?n dán 0805104 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C35 Old Comment=T? di?n dán 0805104 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C36 Old Comment=T? di?n dán 0805104 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C37 Old Comment=T? di?n dán 0805104 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C41 Old Comment=T? di?n dán 0805104 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C46 Old Comment=T? di?n dán 0805104 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C53 Old Comment=T? di?n dán 0805105 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C43 Old Comment=T? di?n dán 0805106 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=C48 Old Comment=T? di?n dán 0805106 New Comment=T? di?n dán 0603104
+Change Component Comment : Designator=R46 Old Comment=Ði?n tr? dán 08050R New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R47 Old Comment=Ði?n tr? dán 08050R New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R48 Old Comment=Ði?n tr? dán 08050R New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R49 Old Comment=Ði?n tr? dán 08050R New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R410 Old Comment=Ði?n tr? dán 08050R New Comment=Ði?n tr? dán 060310k
+Change Component Comment : Designator=R01 Old Comment=Ði?n tr? dán 0805330R New Comment=Ði?n tr? dán 060310k
+Change Component Designator: OldDesignator=RS485_2 NewDesignator=PAPI
+Change component parameters: Designator = "C31"; Footprint = "CAP 0805"; UniqueID = "\FXYHUKET"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C32"; Footprint = "CAP 0805"; UniqueID = "\YCNPFAUJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C42"; Footprint = "CAP 0805"; UniqueID = "\HJNURBGV"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C43"; Footprint = "CAP 0805"; UniqueID = "\VJMCTRBR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C44"; Footprint = "CAP 0805"; UniqueID = "\TLPWPXUT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C45"; Footprint = "CAP 0805"; UniqueID = "\HFOSRMLM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C47"; Footprint = "CAP 0805"; UniqueID = "\XQUJSNXF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C48"; Footprint = "CAP 0805"; UniqueID = "\XQEWQBCB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C51"; Footprint = "CAP 0805"; UniqueID = "\VMXIGTET"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C52"; Footprint = "CAP 0805"; UniqueID = "\EJSUSKJB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C53"; Footprint = "CAP 0805"; UniqueID = "\NGWSBBES"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C54"; Footprint = "CAP 0805"; UniqueID = "\IRKIGPBI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C55"; Footprint = "CAP 0805"; UniqueID = "\CGCNETXT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R01"; Footprint = "RESC1608N_F"; UniqueID = "\FVUGSCCS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R46"; Footprint = "RESC1608N_F"; UniqueID = "\LXVEUHKT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R47"; Footprint = "RESC1608N_F"; UniqueID = "\WVCOFYSD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R48"; Footprint = "RESC1608N_F"; UniqueID = "\WFGNDMLV"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R49"; Footprint = "RESC1608N_F"; UniqueID = "\AJUBHIYA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R410"; Footprint = "RESC1608N_F"; UniqueID = "\TAHBGQXO"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R31"; Footprint = "RESC1608N_F"; UniqueID = "\HDLQTNTD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R32"; Footprint = "RESC1608N_F"; UniqueID = "\CPWFLVKH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R33"; Footprint = "RESC1608N_F"; UniqueID = "\GISVWRUU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R43"; Footprint = "RESC1608N_F"; UniqueID = "\QFBGAVDP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C71"; Footprint = "CAP 0805"; UniqueID = "\KWCJOSFQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R41"; Footprint = "RESC1608N_F"; UniqueID = "\MDSLSDXE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R42"; Footprint = "RESC1608N_F"; UniqueID = "\CEHURBVN"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R44"; Footprint = "RESC1608N_F"; UniqueID = "\YHDCGNCE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R45"; Footprint = "RESC1608N_F"; UniqueID = "\HBIBGGDX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=C49(CAP 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5V Pin=C49-1
+Added Pin To Net: NetName=+5V Pin=C49-1
+Added Pin To Net: NetName=+5V Pin=C49-1
+Added Pin To Net: NetName=+5V Pin=C49-1
+Added Pin To Net: NetName=+5V Pin=C49-1
+Added Pin To Net: NetName=GND Pin=C49-2
+Change Net Name : Old Net Name=485A New Net Name=PAPIA
+Change Net Name : Old Net Name=485B New Net Name=PAPIB
+Added Member To Class: ClassName=PAPI_M2_Control Member=Component C49 T? di?n dán 0603104

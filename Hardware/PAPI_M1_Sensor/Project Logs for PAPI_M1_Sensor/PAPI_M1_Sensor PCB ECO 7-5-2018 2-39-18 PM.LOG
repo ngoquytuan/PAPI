@@ -1,0 +1,130 @@
+Removed Pin From Net: NetName=GND Pin=C35-1
+Removed Pin From Net: NetName=+5V Pin=C35-2
+Removed Pin From Net: NetName=+24V Pin=D11-A
+Removed Pin From Net: NetName=NetC10_2 Pin=D11-K
+Removed Pin From Net: NetName=GND Pin=D21-A
+Removed Pin From Net: NetName=+5V Pin=D21-K
+Removed Pin From Net: NetName=GND Pin=D41-A
+Removed Pin From Net: NetName=RS485A Pin=D41-K
+Removed Pin From Net: NetName=GND Pin=D42-A
+Removed Pin From Net: NetName=RS485B Pin=D42-K
+Removed Member From Class: ClassName=PAPI_M1_Sensor Member=D11
+Removed Member From Class: ClassName=PAPI_M1_Sensor Member=D21
+Removed Member From Class: ClassName=PAPI_M1_Sensor Member=D41
+Removed Member From Class: ClassName=PAPI_M1_Sensor Member=D42
+Change Component Comment : Designator=C35 Old Comment=Cap_104_0805 New Comment=T? di?n dán 0805104
+Change Component Comment : Designator=C41 Old Comment=Cap_104_0805 New Comment=T? di?n dán 0805104
+Change Component Comment : Designator=D31 Old Comment=SOT323 New Comment=BAV99
+Change component parameters: Designator = "C10"; Footprint = "CAPC2012N_F"; UniqueID = "\HOKLECEH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C20"; Footprint = "CAPC2012N_F"; UniqueID = "\CSHSJVHU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C21"; Footprint = "CAPC2012N_F"; UniqueID = "\PPEJCAQI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C22"; Footprint = "CAPC2012N_F"; UniqueID = "\QULQOQIW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C23"; Footprint = "CAPC2012N_F"; UniqueID = "\KGNLSPIR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C24"; Footprint = "CAPC2012N_F"; UniqueID = "\AJUQLGCP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "105"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C25"; Footprint = "CAPC2012N_F"; UniqueID = "\YLNVYMUE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "103"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C26"; Footprint = "CAPC2012N_F"; UniqueID = "\EXEWUVKT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "103"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C35"; Footprint = "CAPC2012N_F"; UniqueID = "\RYUDYHKP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C41"; Footprint = "CAPC2012N_F"; UniqueID = "\FKHKQUBS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "104"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Cx1"; Footprint = "CAPC2012N_F"; UniqueID = "\ENRKYENT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "22"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Cx2"; Footprint = "CAPC2012N_F"; UniqueID = "\YLVTTGEW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "22"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R21"; Footprint = "RESC2012N_F"; UniqueID = "\CCVMTJIW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R32"; Footprint = "RESC2012N_F"; UniqueID = "\FXAHRMLD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "330R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R35"; Footprint = "RESC2012N_F"; UniqueID = "\PMTPXMUE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R36"; Footprint = "RESC2012N_F"; UniqueID = "\RKEVWSOO"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R37"; Footprint = "RESC2012N_F"; UniqueID = "\QCFUUYPF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "Ði?n tr? dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "Ði?n tr? c?m 1/4W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "Ði?n tr? dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm4"; Value = "Ði?n tr? dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5V Pin=C35-1
+Added Pin To Net: NetName=+5V Pin=C35-1
+Added Pin To Net: NetName=+5V Pin=C35-1
+Added Pin To Net: NetName=+5V Pin=C35-1
+Added Pin To Net: NetName=+5V Pin=C35-1
+Added Pin To Net: NetName=GND Pin=C35-2

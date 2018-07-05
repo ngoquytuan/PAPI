@@ -1,0 +1,16 @@
+Change Component Footprint: Designator=R51 Old Footprint=RESC1608N_F New Footprint=RES 0805
+Change Component Footprint: Designator=R52 Old Footprint=RESC1608N_F New Footprint=RES 0805
+Change Component Comment : Designator=C51 Old Comment=T? di?n dán 0603104 New Comment=T? di?n dán 0603101
+Change Component Comment : Designator=C52 Old Comment=T? di?n dán 0603104 New Comment=T? di?n dán 0603101
+Change component parameters: Designator = "C51"; Footprint = "CAP 0805"; UniqueID = "\VMXIGTET"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "101"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C52"; Footprint = "CAP 0805"; UniqueID = "\EJSUSKJB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "cm1"; Value = "T? di?n dán 0603"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm2"; Value = "T? di?n dán 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "cm3"; Value = "T? di?n dán 1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "101"; VariantName = "[No Variations]"

@@ -1,0 +1,2 @@
+Change Net Name : Old Net Name=I2C2_SCL New Net Name=UART3_TX
+Change Net Name : Old Net Name=I2C2_SDA New Net Name=UART3_RX

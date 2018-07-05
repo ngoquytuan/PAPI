@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=Vin Pin=D3-A
+Removed Pin From Net: NetName=GND Pin=D3-K
+Added Pin To Net: NetName=GND Pin=D3-A
+Added Pin To Net: NetName=Vin Pin=D3-K
+Added Member To Class: ClassName=PAPI_M2_Control Member=Component C41 T? di?n dán 0805104
