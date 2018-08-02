@@ -1,0 +1,91 @@
+;/*
+; * SimpleKalmanFilter - a Kalman Filter implementation for single variable models.
+; * Created by Denys Sene, January, 1, 2017.
+; * Released under MIT License - see LICENSE file for details.
+; */
+;#include "SimpleKalmanFilter.h"
+;#include <math.h>
+;#include <stdlib.h>
+;//float u_kalman,u;
+;float _err_measure;
+;float _err_estimate;
+;float _q;
+;float _current_estimate;
+;float _last_estimate;
+;float _kalman_gain;
+;
+;void SimpleKalmanFilter(float mea_e, float est_e, float q)
+; 0001 0012 {
+
+	.CSEG
+;PCODE: $00000000 VOL: 0
+;PCODE: $00000001 VOL: 0
+; 0001 0013   _err_measure=mea_e;
+;PCODE: $00000002 VOL: 0
+;	mea_e -> Y+8
+;	est_e -> Y+4
+;	q -> Y+0
+;PCODE: $00000003 VOL: 0
+;PCODE: $00000004 VOL: 0
+; 0001 0014   _err_estimate=est_e;
+;PCODE: $00000005 VOL: 0
+;PCODE: $00000006 VOL: 0
+; 0001 0015   _q = q;
+;PCODE: $00000007 VOL: 0
+;PCODE: $00000008 VOL: 0
+; 0001 0016 }
+;PCODE: $00000009 VOL: 0
+;PCODE: $0000000A VOL: 0
+;PCODE: $0000000B VOL: 0
+;
+;float updateEstimate(float mea)
+; 0001 0019 {
+;PCODE: $0000000C VOL: 0
+;PCODE: $0000000D VOL: 0
+; 0001 001A   _kalman_gain = _err_estimate/(_err_estimate + _err_measure);
+;PCODE: $0000000E VOL: 0
+;	mea -> Y+0
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+; 0001 001B   _current_estimate = _last_estimate + _kalman_gain * (mea - _last_estimate);
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+; 0001 001C   _err_estimate =  (1.0 - _kalman_gain)*_err_estimate + fabs(_last_estimate-_current_estimate)*_q;
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+; 0001 001D   _last_estimate=_current_estimate;
+;PCODE: $0000002D VOL: 0
+;PCODE: $0000002E VOL: 0
+; 0001 001E 
+; 0001 001F   return _current_estimate;
+;PCODE: $0000002F VOL: 0
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+; 0001 0020 }
+;PCODE: $00000032 VOL: 0
+;
+;

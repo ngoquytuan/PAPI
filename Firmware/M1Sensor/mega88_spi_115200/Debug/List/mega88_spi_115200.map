@@ -1,0 +1,97 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+count_cali                                                                        0x0200       2
+send_avgy                                                                         0x0202       2
+X_err_measure                                                                     0x0204       4
+X_err_estimate                                                                    0x0208       4
+X_q                                                                               0x020C       4
+X_current_estimate                                                                0x0210       4
+X_last_estimate                                                                   0x0214       4
+X_kalman_gain                                                                     0x0218       4
+Y_err_measure                                                                     0x021C       4
+Y_err_estimate                                                                    0x0220       4
+Y_q                                                                               0x0224       4
+Y_current_estimate                                                                0x0228       4
+Y_last_estimate                                                                   0x022C       4
+Y_kalman_gain                                                                     0x0230       4
+lux                                                                               0x0234       2
+buff_temp1                                                                        0x0236       1
+buff_temp2                                                                        0x0237       1
+new_tempu                                                                         0x0238       2
+usart_time_out                                                                    0x023A       2
+send_sensor_info                                                                  0x023C       2
+ds_temp                                                                           0x023E       2
+ds_err_measure                                                                    0x0240       4
+ds_err_estimate                                                                   0x0244       4
+ds_q                                                                              0x0248       4
+ds_current_estimate                                                               0x024C       4
+ds_last_estimate                                                                  0x0250       4
+ds_kalman_gain                                                                    0x0254       4
+rx_buffer0                                                                        0x0258       8
+rx_wr_index0                                                                      0x0260       1
+rx_rd_index0                                                                      0x0261       1
+rx_counter0                                                                       0x0262       1
+tx_buffer0                                                                        0x0263       8
+tx_wr_index0                                                                      0x026B       1
+tx_rd_index0                                                                      0x026C       1
+tx_counter0                                                                       0x026D       1
+_err_measure                                                                      0x026E       4
+_err_estimate                                                                     0x0272       4
+_q                                                                                0x0276       4
+_current_estimate                                                                 0x027A       4
+_last_estimate                                                                    0x027E       4
+_kalman_gain                                                                      0x0282       4
+_seed                                                                             0x0286       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+osrawx                                                                            0x0000       2
+osrawy                                                                            0x0002       2
+check_eep1                                                                        0x0004       1
+check_eep2                                                                        0x0005       1
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+cali_flag                                                                         R4           1
+count                                                                             R3           1
+newavgx                                                                           R5,R6        2
+newavgy                                                                           R7,R8        2
+avgx                                                                              R9,R10       2
+avgy                                                                              R11,R12      2
+send_avgx                                                                         R13,R14      2
+rx_buffer_overflow0                                                               GPIOR0.0  1bit
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+X_updateEstimate                                                                  0x000DF    165
+Y_updateEstimate                                                                  0x00184    165
+cal_tempu                                                                         0x00229    212
+putchar                                                                           0x002FD     43
+init_hw                                                                           0x00328    102
+timer0_ovf_isr                                                                    0x0038E     54
+usart_rx_isr                                                                      0x003C4     55
+usart_tx_isr                                                                      0x003FB     42
+read_adc                                                                          0x00425     27
+get_sensor_data                                                                   0x00440     62
+main                                                                              0x0047E    346
+read_SCA100TX                                                                     0x005D8      7
+read_SCA100TY                                                                     0x005DF      7
+process_uart_mess                                                                 0x00602     32
+DS18B20_ReadByte                                                                  0x00622     24
+DS18B20_WriteByte                                                                 0x0063A     29
+DS18B20_Init                                                                      0x00657     13
+DS18B20_WriteFunc                                                                 0x00664      7
+DS18B20_Config                                                                    0x0066B     18
+SimpleKalmanFilter                                                                0x0067D     36
+updateEstimate                                                                    0x006A1    165
+fabs                                                                              0x00746      7
+put_usart_G101                                                                    0x0074D     13
+_print_G101                                                                       0x0075A    361
+printf                                                                            0x008C3     32
+spi                                                                               0x008E3      9
+strlen                                                                            0x008EC     12
+strlenf                                                                           0x008F8     13

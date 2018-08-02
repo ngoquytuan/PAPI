@@ -1,0 +1,452 @@
+/*******************************************************
+This program was created by the
+CodeWizardAVR V3.12 Advanced
+Automatic Program Generator
+© Copyright 1998-2014 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+Project : PAPI sensor
+Version : Final
+Date    : 3/12/2018
+Author  : 
+Company : 
+Comments: 
+BAUD = 115200;
+Send CALI to calibrate the sensors, offset value is saved to eeprom after calibrate
+If eeprom is bad, LED is always light
+Mat 1 ky tu cuoi khi send uart do tx rs485
+Test ok 2/Aug/2018
+Chip type               : ATmega88PA
+Program type            : Application
+AVR Core Clock frequency: 16.000000 MHz
+Memory model            : Small
+External RAM size       : 0
+Data Stack size         : 256
+*******************************************************/
+
+#include <mega88a.h>
+#include <stdlib.h>
+#include "mega88PapiSenConf.h"
+#include "SimpleKalmanFilter.h"
+#include <delay.h>
+// Standard Input/Output functions
+#include <stdio.h> 
+// SPI functions
+#include <spi.h>
+// Declare your global variables here
+
+
+// Timer 0 overflow interrupt service routine
+interrupt [TIM0_OVF] void timer0_ovf_isr(void)
+{
+// Reinitialize Timer 0 value
+TCNT0=0x06;
+// Place your code here
+if(usart_time_out > ONTIME) usart_time_out--;
+if(send_sensor_info > ONTIME) send_sensor_info--;
+if(count_cali > ONTIME) count_cali--; 
+}
+
+
+
+// USART Receiver interrupt service routine
+interrupt [USART_RXC] void usart_rx_isr(void)
+{
+char status,data;
+status=UCSR0A;
+data=UDR0;
+if ((status & (FRAMING_ERROR | PARITY_ERROR | DATA_OVERRUN))==0)
+   {
+   usart_time_out=10;// 10ms after the last character received will processing  rx_buffer0
+   rx_buffer0[rx_wr_index0++]=data;
+#if RX_BUFFER_SIZE0 == 256
+   // special case for receiver buffer size=256
+   if (++rx_counter0 == 0) rx_buffer_overflow0=1;
+#else
+   if (rx_wr_index0 == RX_BUFFER_SIZE0) rx_wr_index0=0;
+   if (++rx_counter0 == RX_BUFFER_SIZE0)
+      {
+      rx_counter0=0;
+      rx_buffer_overflow0=1;
+      }
+#endif
+   }
+}
+
+
+
+
+
+// USART Transmitter interrupt service routine
+interrupt [USART_TXC] void usart_tx_isr(void)
+{
+if (tx_counter0)
+   {
+   --tx_counter0;
+   UDR0=tx_buffer0[tx_rd_index0++];
+#if TX_BUFFER_SIZE0 != 256
+   if (tx_rd_index0 == TX_BUFFER_SIZE0) tx_rd_index0=0;
+#endif
+   } 
+if (!tx_counter0) RS485_TX(0);//Turn RS485 TX to RS485 RX   
+}
+
+
+
+
+
+
+
+// Read the AD conversion result
+unsigned int read_adc(unsigned char adc_input)
+{
+ADMUX=adc_input | ADC_VREF_TYPE;
+// Delay needed for the stabilization of the ADC input voltage
+delay_us(10);
+// Start the AD conversion
+ADCSRA|=(1<<ADSC);
+// Wait for the AD conversion to complete
+while ((ADCSRA & (1<<ADIF))==0);
+ADCSRA|=(1<<ADIF);
+return ADCW;
+}
+
+void get_sensor_data(void)
+{
+      DS18B20_WriteFunc(DS1820_CMD_CONVERTTEMP);  // Khoi dong qua trinh do va chuyen doi nhiet do ra so nhi phan
+      delay_us(200);
+      DS18B20_WriteFunc(DS1820_CMD_READSCRPAD);   // Doc du lieu tu bo nho DS18b20 
+    
+      buff_temp1 = DS18B20_ReadByte(); 
+      buff_temp2 = DS18B20_ReadByte(); 
+      ds_temp = cal_tempu(buff_temp1,buff_temp2);
+      newavgx = read_SCA100TX();
+      avgx = X_updateEstimate(newavgx);
+      newavgy = read_SCA100TY();
+      avgy = Y_updateEstimate(newavgy);
+      lux = read_adc(3); 
+      lux = (int)(updateEstimate(lux)); 
+}
+void main(void)
+{
+// Declare your local variables here
+
+// Crystal Oscillator division factor: 1
+#pragma optsize-
+CLKPR=(1<<CLKPCE);
+CLKPR=(0<<CLKPCE) | (0<<CLKPS3) | (0<<CLKPS2) | (0<<CLKPS1) | (0<<CLKPS0);
+#ifdef _OPTIMIZE_SIZE_
+#pragma optsize+
+#endif
+
+init_hw();
+RS485_TX(1); 
+printf("PAPI sensor \r\n");
+if((check_eep1 =='O')&&(check_eep2 =='K'))//eeprom is good
+{
+ RS485_TX(1);
+ printf("EEPROM is good! Offset x,y:%d,%d\r\n ",osrawx,osrawy);
+}
+else
+{
+ RS485_TX(1);
+ printf("EEPROM is BAD! Offset x,y:%d,%d\r\n ",osrawx,osrawy);
+
+}
+
+DS18B20_Init();
+DS18B20_Config(15,40,DS18B20_9BIT_RES); // Cau hinh cho DS18B20
+
+count = 0 ;
+//avgx = read_SCA100TX();
+//avgy = read_SCA100TY();
+SimpleKalmanFilter(2.0,2.0,0.01);
+get_sensor_data();
+get_sensor_data();
+get_sensor_data();
+get_sensor_data();
+get_sensor_data();
+get_sensor_data();
+get_sensor_data();
+get_sensor_data();
+get_sensor_data();
+get_sensor_data();
+while (1)
+      {
+      // Place your code here
+      //If eeprom is bad, LED is always light
+      if((check_eep1 !='O')&&(check_eep2 !='K'))//eeprom is good
+      {
+        LED(1);
+      }    
+      if(send_sensor_info == ONTIME) {
+      //check all sensors after send_sensor_info time
+        send_sensor_info = 100;//0.1s
+        LED(1);
+        count++;  
+        get_sensor_data();
+        //tinh gia tri trung binh 10 lan do
+        if(count == 10)
+        {
+
+            count = 0; 
+            send_avgx = (avgx-osrawx)*5;
+            send_avgy = (avgy-osrawy)*5;
+            //>> du lieu da x5 => de ra goc thi chi can x7 vi 5x7 =35
+            RS485_TX(1);
+            //truyen thang gia tri co dau     
+            //printf("S>%d-%d-%d-%d<\r\n  ",(send_avgx),(send_avgy),cal_tempu(buff_temp1,buff_temp2),lux);
+            printf("S>%04X-%04X-%03X-%03X<\r\n  ",(send_avgx),(send_avgy),cal_tempu(buff_temp1,buff_temp2),lux);
+        }       
+        //RS485_TX(1);
+        //truyen thang gia tri co dau  
+        //printf("S>%04X-%04X-%03X-%03X<\r\n  ",(send_avgx),(send_avgy),cal_tempu(buff_temp1,buff_temp2),lux);
+        //printf("%d,%d\r\n ",lux,(int)(u_kalman));  
+        //ds_temp = cal_tempu(buff_temp1,buff_temp2); 
+        //printf("%d\r\n ",ds_temp); 
+        //printf("%d,%d\r\n ",newavgx,avgx);  
+        //printf("%d,%d,%d,%d\r\n ",avgx,avgy,ds_temp,(int)(u_kalman));
+        LED(0);
+      }
+      if(usart_time_out == ONTIME) {
+        usart_time_out = STOPTHIS;
+        process_uart_mess();
+        //RS485_TX(1);
+        //printf("????\r\n "); 
+      }
+      if(cali_flag == ONTIME)//hieu chinh cam bien       
+      {
+        count_cali = 2000;
+        cali_flag = STOPTHIS;
+        LED(1);
+        send_sensor_info = STOPTHIS;
+        //RS485_TX(1);
+        //printf("Begin cali\r\n ");
+        check_eep1 = '?';
+        check_eep2 = '?';
+        delay_ms(100);
+      };
+      if(count_cali > ONTIME)
+      {
+        delay_ms(1000);
+        get_sensor_data();delay_ms(100);
+        get_sensor_data();delay_ms(100);
+        get_sensor_data();delay_ms(100);
+        get_sensor_data();delay_ms(100);
+        get_sensor_data();delay_ms(100);
+        get_sensor_data();delay_ms(100);
+        get_sensor_data();delay_ms(100);
+        get_sensor_data();delay_ms(100);
+        get_sensor_data();delay_ms(100);
+        get_sensor_data();delay_ms(100);
+        osrawx = avgx;
+        osrawy = avgy;
+        count_cali = ONTIME;
+        RS485_TX(1);
+        printf("Offset done! x,y:%d,%d\r\n ",osrawx,osrawy);
+        check_eep1 = 'O';
+        check_eep2 = 'K';        
+      };    
+      
+      if(count_cali == ONTIME)
+      {
+        count_cali= STOPTHIS;
+        LED(0);
+        send_sensor_info = 100;
+
+        if( check_eep1 != 'O'){
+        RS485_TX(1);
+        printf("Cannot offset x,y:%d,%d\r\n ",osrawx,osrawy); }
+        
+        
+      }
+      //delay_ms(200);
+      }
+}
+
+
+
+
+
+unsigned int read_SCA100TX(void){
+  unsigned int result = 0;
+  result=read_SCA100TXY(RDAX);
+  return(result);
+}
+
+unsigned int read_SCA100TY(void){
+  unsigned int result = 0;
+  result=read_SCA100TXY(RDAY);
+  return(result);
+}
+
+//Read SCA100TXY from the SCA100T
+unsigned int read_SCA100TXY(unsigned char thisValue){
+    unsigned char inByte = 0;           // incoming byte from the SPI
+    unsigned int result = 0;   // result to return
+      
+    // digitalWrite(chipSelectPin, LOW);
+    PORTB &= ~(1<<2);
+    //SPI.transfer(thisValue);
+    spi(thisValue);  
+    // delay(100);
+    result = spi(0);//SPI.transfer(0x00);
+    inByte = spi(0);//SPI.transfer(0x00);
+    //digitalWrite(chipSelectPin, HIGH);
+    PORTB |= (1<<2);
+    result = result << 8;
+    result = result | inByte;
+    result = result >> 5;
+    return(result);
+
+}
+//processing data from master, if received "CALI" => taking ofset for x,y
+void process_uart_mess()
+{
+    char usart_count;
+
+    //RS485_TX(1);
+    //printf("%s\r\n ",rx_buffer0);
+    if((rx_buffer0[0]=='C')&&(rx_buffer0[1]=='A')&&(rx_buffer0[3]=='I'))
+    {   
+    cali_flag=1;
+                       /*      
+    osrawx = rawx;
+    osrawy = rawy;
+    RS485_TX(1);
+    printf("Ofset x,y:%d,%d\r\n ",osrawx,osrawy);
+    check_eep1 = 'O';
+    check_eep2 = 'K';*/
+    }
+    //reset memorry    
+    //memset(rx_buffer0,0,RX_BUFFER_SIZE0);
+    for(usart_count=0;usart_count<RX_BUFFER_SIZE0;usart_count++)
+                            {
+                            rx_buffer0[usart_count]=0                   ;
+                            }  
+    rx_wr_index0=0;
+}
+
+/***********************************************************************************/
+/*-----------------------------------------------------------------------------
+Noi Dung    :   Doc 1 byte du lieu tu DS18B20 ra ngoai. 
+Tham Bien   :   Khong. 
+Tra Ve      :   Byte du lieu can doc.
+  -----------------------------------------------------------------------------*/ 
+  
+    
+unsigned char DS18B20_ReadByte(void)
+{   
+    unsigned char i=0;
+    unsigned char data=0;      
+      
+    for(i=8;i>0;i--)
+    {    
+        //GPIO_SetState(GPIOA,GPIO_Pin_15,GPIO_Mode_Out_PP);   // Cau hinh chan DQ la OUPUT 
+        DDRC.2 = 1;      
+        DS18B20_PORT_DQ_L;  // Keo chan DQ xuong muc '0'
+        data>>=1;
+        DS18B20_PORT_DQ_H;  // Keo chan DQ len muc '1'      
+        //GPIO_SetState(GPIOA,GPIO_Pin_15,GPIO_Mode_IPU);   // Cau hinh chan DQ la INPUT  
+        DDRC.2 = 0;
+        PORTC.2 =1;
+        if(PINC.2) data|=0x80;   // Nhan du lieu tra ve tu DS18B20
+        delay_us(120);                                                 
+    }
+    return(data);    
+}    
+
+/*-----------------------------------------------------------------------------
+Noi Dung    :   Viet 1 byte du lieu vao DS18B20. 
+Tham Bien   :   data: Byte du lieu can viet vao. 
+Tra Ve      :   Khong.
+  -----------------------------------------------------------------------------*/
+          
+void DS18B20_WriteByte(unsigned char data)
+{
+    unsigned char i=0;
+    //GPIO_SetState(GPIOA,GPIO_Pin_15,GPIO_Mode_Out_PP);   // Cau hinh chan DQ la OUTPUT  
+    DDRC.2 = 1;
+    for (i=8;i>0;i--)
+    {
+        DS18B20_PORT_DQ_L;  // Keo chan DQ xuong muc '0'
+        //DS18B20_PORT_DQ=(data&0x01); // Viet du lieu vao DS18B20
+                if(data&0x01) DS18B20_PORT_DQ_H;
+                if(!(data&0x01)) DS18B20_PORT_DQ_L;
+        delay_us(60);
+        DS18B20_PORT_DQ_H;  // Keo chan DQ len muc '1'
+        data>>=1;
+    }    
+}
+
+/*-----------------------------------------------------------------------------
+Noi Dung    :   Khoi tao DS18B20. 
+Tham Bien   :   Khong. 
+Tra Ve      :   Gia tri tra ve khi khoi tao xong cua DS18B20 (bit).
+  -----------------------------------------------------------------------------*/
+      
+void DS18B20_Init(void)
+{
+    //GPIO_SetState(GPIOA,GPIO_Pin_15,GPIO_Mode_Out_PP);   // Cau hinh chan DQ la OUTPUT  
+    DDRC.2 = 1;
+    DS18B20_PORT_DQ_L;  // Keo DQ xuong muc '0' trong khoang 480us
+    delay_us(500);       
+    //GPIO_SetState(GPIOA,GPIO_Pin_15,GPIO_Mode_IPU);   // Cau hinh chan DQ la INPUT trong khoang 480us
+    DDRC.2 = 0;
+    PORTC.2 =1;
+    delay_us(500);         
+}
+
+/*-----------------------------------------------------------------------------
+Noi Dung    :   Ghi 1 byte lenh chuc nang vao DS18B20. 
+Tham Bien   :   byte_func: byte lenh chuc nang cua DS18B20. 
+Tra Ve      :   Khong.
+  -----------------------------------------------------------------------------*/
+  
+void DS18B20_WriteFunc(unsigned char byte_func)
+{
+    DS18B20_Init();                 // Khoi tao DS18B20
+    DS18B20_WriteByte(DS1820_CMD_SKIPROM);  // Truy cap thang den cac lenh chuc nang bo nho cua DS18B20
+    DS18B20_WriteByte(byte_func);   // Viet ma lenh chuc nang
+}
+
+/*-----------------------------------------------------------------------------
+Noi Dung    :   Cau hinh cho DS18B20. 
+Tham Bien   :   temp_low: Gia tri nhiet do thap nhat de dua ra canh bao. 
+                temp_high: Gia tri nhiet do cao nhat de dua ra canh bao.   
+                resolution: Do phan giai cho DS18B20.(1|R1|R0|1|1|1|1|1)
+Tra Ve      :   Khong.
+  -----------------------------------------------------------------------------*/
+  
+void DS18B20_Config(unsigned char temp_low, unsigned char temp_high, unsigned char resolution)
+{   
+    resolution = (resolution<<5)|0x1f;  
+    DS18B20_WriteFunc(DS1820_CMD_WRITESCRPAD);        // Cho phep ghi 3 byte vao bo nho nhap:    
+    DS18B20_WriteByte(temp_high);   // byte 2: Th
+    DS18B20_WriteByte(temp_low);    // byte 3: Tl 
+    DS18B20_WriteByte(resolution);  // byte 4: configuration register
+    DS18B20_WriteFunc(DS1820_CMD_COPYSCRPAD);        // Ghi vao EEPROM
+}                       
+
+/*-----------------------------------------------------------------------------
+Noi Dung    :   Doc gia tri nhiet do do duoc cua DS18B20. 
+Tham Bien   :   Khong. 
+Tra Ve      :   Gia tri nhiet do do duoc.
+  -----------------------------------------------------------------------------*/
+                                              
+//float DS18B20_ReadTemp(void)
+//{
+//    float temp;
+//    unsigned char buff_temp1,buff_temp2; 
+//    
+//    DS18B20_WriteFunc(DS1820_CMD_CONVERTTEMP);  // Khoi dong qua trinh do va chuyen doi nhiet do ra so nhi phan
+//    delay_us(200);
+//    DS18B20_WriteFunc(DS1820_CMD_READSCRPAD);   // Doc du lieu tu bo nho DS18b20 
+//    
+//    buff_temp1 = DS18B20_ReadByte(); 
+//    temp=((float)(buff_temp1&0x0f))/16;            // Lay phan thuc cua gia tri nhiet do
+//    buff_temp2 = DS18B20_ReadByte();                 
+//    buff_temp1 =((buff_temp1&0xf0)>>4)|((buff_temp2&0x0f)<<4) ;    // Lay phan nguyen cua gia tri nhiet do
+//    temp=temp+buff_temp1;
+//    return temp;       
+//}

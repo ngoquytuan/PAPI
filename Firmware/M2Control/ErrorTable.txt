@@ -1,0 +1,9 @@
+ERR1: Hệ thống: Lỗi cảm biến
+ERR2: Hệ thống: Lỗi bóng đèn
+ERR3: Hệ thống: Lỗi góc nghiêng
+ERR4: Hệ thống: Lỗi kết nối - Ko có kết nối
+ERR5: Hệ thống: Đèn khác bị lỗi
+ERR6: Cục bộ : Đèn bị nghiêng
+ERR7: Cục bộ : Các cảm biến hỏng hoặc không có cảm biến
+ERR8: Cục bộ : Bóng đèn cháy
+ERR9: Cục bộ : Cảm biến quá nhiệt
