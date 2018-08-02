@@ -1,3 +1,0 @@
-Removed Pin From Net: NetName=GND Pin=C41-1
-Removed Pin From Net: NetName=VCC Pin=C41-2
-Removed Member From Class: ClassName=PAPI_M2_Control Member=C41

@@ -1,5 +1,0 @@
-Removed Pin From Net: NetName=VCC Pin=E32_1W-2
-Added Pin To Net: NetName=VCC Pin=C05-1
-Added Pin To Net: NetName=+5V Pin=E32_1W-2
-Added Pin To Net: NetName=VCC Pin=U12-2
-Added Pin To Net: NetName=VCC Pin=U12-4
